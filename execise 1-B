@@ -1,0 +1,37 @@
+---
+title: "Week 1-Exercise 2"
+author: "Anara Alshanbayeva"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Step1. Perform the sampling
+
+Sampling 100 values from log-normal distribution
+
+```{r}
+set.seed(5)
+values <- rlnorm(100, meanlog = 1, sdlog = 0.25)
+```
+### Step2. Plotting the histogram
+
+```{r}
+
+hist(values)
+```
+
+Log scale histogram of the 100 values' distribution: 
+
+```{r}
+hist(log(values))
+```
+
+### Step3. Plotting mean & variance 
+```{r}
+
+mean(values)
+var(values)
+```
